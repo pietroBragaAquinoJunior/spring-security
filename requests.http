@@ -1,0 +1,6 @@
+@host = localhost:8080
+@usuario = user
+@senha = 5ba6adb6-6181-462c-b59e-b7708dc85682
+
+GET http://{{host}}/api/version
+Authorization: Basic {{usuario}}:{{senha}}
