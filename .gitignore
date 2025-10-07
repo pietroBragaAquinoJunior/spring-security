@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Esconder Chaves publica e privada ###
+src/main/resources/private.pem
+src/main/resources/public.pem

@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "token.jwt.secret",
+    "type": "java.lang.String",
+    "description": "Chave para gerar e decodificar tokens JWT"
+  },
+  {
+    "name": "jwt.issuer.uri",
+    "type": "java.lang.String",
+    "description": "Basicamente é a URL base dessa aplicação. É importante que o sistema verifique se realmente foi ele mesmo quem assinou o token."
+  }
+]}

@@ -1,6 +1,7 @@
-@host = localhost:8080
-@usuario = user
-@senha = 5ba6adb6-6181-462c-b59e-b7708dc85682
+POST http://localhost:8080/api/autenticar/registrar
+Content-Type: application/json
 
-GET http://{{host}}/api/version
-Authorization: Basic {{usuario}}:{{senha}}
+{
+  "username": "pietrobraga",
+  "password": "172983456"
+}

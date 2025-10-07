@@ -7,7 +7,7 @@ spring:
     application:
         name: spring-security
     datasource:
-        url: jdbc:h2:mem:hexagonaldb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+        url: jdbc:h2:mem:springsecurity;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
         driver-class-name: org.h2.Driver
         username: sa
         password: 
@@ -21,3 +21,11 @@ spring:
     jpa:
         hibernate:
             ddl-auto: none
+
+token:
+    jwt:
+        secret: 4xQ8lNbHF0vsFJSS52iMJwCvAZNA34Ax6gMoyffLzrg=
+
+jwt:
+    issuer:
+        uri: http://localhost:8080
