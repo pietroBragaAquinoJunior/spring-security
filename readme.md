@@ -64,4 +64,5 @@
    * Maven: ./mvnw spring-boot:run
    * Gradle: ./gradlew bootRun
 
-
+5. **Test API requests:**
+   You can use **`requests.http`** (or any HTTP client like Postman or cURL) to make requests to your endpoints and validate JWT authentication.
