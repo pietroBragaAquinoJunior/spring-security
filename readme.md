@@ -34,9 +34,10 @@
 
 ## ⏳ Live Status and Deployment
 
-| Status            | Link                                                                     |
-| :---------------- | :----------------------------------------------------------------------- |
-| 🚧 In Development | [Repository](https://github.com/pietroBragaAquinoJunior/spring-security) |
+| Status       | Link |
+| :----------- | :--- |
+| ✅ finished (no deploy) | -    |
+
 
 ---
 
