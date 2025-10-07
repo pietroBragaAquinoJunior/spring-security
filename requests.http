@@ -1,7 +1,8 @@
-@url = http://localhost:8080
+@baseUrl = http://localhost:8080/api
 
-### Registro do usuário 1
-POST {{url}}/api/autenticar/registrar
+### Registrar Usuário
+# @name registrar
+POST {{baseUrl}}/autenticar/registrar
 Content-Type: application/json
 
 {
@@ -9,11 +10,31 @@ Content-Type: application/json
   "password": "172983456"
 }
 
-### Registro do usuário 2
-POST {{url}}/api/autenticar/logar
+# Extrair token do JSON de resposta e salvar na variável {{token}}
+@token = {{registrar.response.body.$.token}}
+
+
+### Logar Usuário
+# @name logar
+POST {{baseUrl}}/autenticar/logar
 Content-Type: application/json
 
 {
   "username": "pietrobraga",
   "password": "172983456"
 }
+
+# Atualiza token com o login
+@token = {{logar.response.body.$.token}}
+
+
+### Endpoint ROLE_ADMIN (precisa de token com ROLE_ADMIN)
+GET {{baseUrl}}/teste/admin
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+
+### Endpoint SCOPE message:read (precisa de token com escopo)
+GET {{baseUrl}}/teste/escopo
+Authorization: Bearer {{token}}
+Content-Type: application/json

@@ -8,6 +8,8 @@ import com.pietro.spring_security.adapters.mappers.UsuarioMapper;
 import com.pietro.spring_security.core.domain.UsuarioDomain;
 import com.pietro.spring_security.core.ports.UsuarioServicePort;
 
+import java.util.Map;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,17 +27,20 @@ public class AutenticarController {
         this.usuarioMapper = usuarioMapper;
     }
 
-    @PostMapping("/registrar")
-    public ResponseEntity<String> register(@RequestBody AutenticarRequestDto request) {
+   @PostMapping("/registrar")
+    public ResponseEntity<Map<String, String>> register(@RequestBody AutenticarRequestDto request) {
         UsuarioDomain usuarioDomain = usuarioMapper.toUsuarioDomain(request);
         String token = usuarioServicePort.registrarUsuario(usuarioDomain);
-        return ResponseEntity.status(HttpStatus.CREATED).body(token); 
+        Map<String, String> response = Map.of("token", token);
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     @PostMapping("/logar")
-    public ResponseEntity<String> login(@RequestBody AutenticarRequestDto request) {
+    public ResponseEntity<Map<String, String>> login(@RequestBody AutenticarRequestDto request) {
         String token = usuarioServicePort.autenticarUsuario(request.getUsername(), request.getPassword());
-        return ResponseEntity.ok(token);
+        Map<String, String> response = Map.of("token", token);
+        return ResponseEntity.ok(response);
     }
+
 
 }
