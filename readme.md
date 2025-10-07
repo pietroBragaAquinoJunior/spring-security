@@ -2,11 +2,6 @@
 
 <img width="938" height="592" alt="image" src="https://github.com/user-attachments/assets/e6a94cab-3e92-473a-9150-bb26bca0ddd5" />
 
-
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/pietroBragaAquinoJunior/spring-security)
-[![Coverage](https://img.shields.io/badge/coverage-90%25-blue)](https://github.com/pietroBragaAquinoJunior/spring-security)
-[![License](https://img.shields.io/badge/license-MIT-yellow)](https://github.com/pietroBragaAquinoJunior/spring-security)
-
 > **💬 Quick Overview:**
 > Production-ready **Spring Boot API** template focusing on **JWT authentication**, **RSA key security**, and **Clean Architecture**. Ensures **business logic isolation**, robust **validation**, **global error handling**, **MapStruct mapping**, and **optimized JPA** with H2 + Flyway. Perfect for scalable and secure backend services.
 
