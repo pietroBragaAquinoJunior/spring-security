@@ -6,4 +6,6 @@ public interface UsuarioServicePort {
 
     String registrarUsuario(UsuarioDomain usuarioDomain);
 
+    String autenticarUsuario(String username, String password);
+
 }

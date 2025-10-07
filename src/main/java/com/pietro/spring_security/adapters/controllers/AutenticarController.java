@@ -32,4 +32,10 @@ public class AutenticarController {
         return ResponseEntity.status(HttpStatus.CREATED).body(token); 
     }
 
+    @PostMapping("/logar")
+    public ResponseEntity<String> login(@RequestBody AutenticarRequestDto request) {
+        String token = usuarioServicePort.autenticarUsuario(request.getUsername(), request.getPassword());
+        return ResponseEntity.ok(token);
+    }
+
 }

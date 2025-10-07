@@ -23,5 +23,11 @@ public class UsuarioServicePortImpl implements UsuarioServicePort {
         UsuarioDomain usuarioDomainSalvo = usuarioPersistencePort.registrarUsuario(usuarioDomain);
         return tokenServicePortImpl.generateToken(usuarioDomainSalvo);
     }
+
+    @Override
+    public String autenticarUsuario(String username, String password) {
+        UsuarioDomain usuarioDomain = usuarioPersistencePort.autenticar(username, password);
+        return tokenServicePortImpl.generateToken(usuarioDomain);
+    }
     
 }

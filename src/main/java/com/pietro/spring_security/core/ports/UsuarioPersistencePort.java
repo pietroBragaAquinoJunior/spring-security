@@ -6,4 +6,8 @@ public interface UsuarioPersistencePort {
 
     UsuarioDomain registrarUsuario(UsuarioDomain usuarioDomain);
 
+    UsuarioDomain encontrarUsuarioPorUsername(String username);
+
+    UsuarioDomain autenticar(String username, String password);
+
 }

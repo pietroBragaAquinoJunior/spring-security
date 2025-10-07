@@ -1,4 +1,16 @@
-POST http://localhost:8080/api/autenticar/registrar
+@url = http://localhost:8080
+
+### Registro do usuário 1
+POST {{url}}/api/autenticar/registrar
+Content-Type: application/json
+
+{
+  "username": "pietrobraga",
+  "password": "172983456"
+}
+
+### Registro do usuário 2
+POST {{url}}/api/autenticar/logar
 Content-Type: application/json
 
 {
